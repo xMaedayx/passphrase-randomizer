@@ -2,7 +2,7 @@
 var num = ['0,1,2,3,4,5,6,7,8,9']
 var lowerc = ['abcdegfhijklmnopqrstuvwxyz']
 var upperc = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
-var specialc = ["!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "]
+var specialc = ["!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "] /* how do i add a single and double quote without messing up syntax? /*
 var Generated = [];
 
 
@@ -13,12 +13,33 @@ var generateBtn = document.querySelector("#generate");
   var userInput1 = numbers(window.confirm("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
   
   var userInput2 = window.confirm("Would you like special characters in your passphrase (y/n)? ")
+  if (userInput2 == 'n') {
+    /* ask about how to ignore userinput3 if userinput2 is no */ 
+  }
   
   var userInput3 = window.confirm("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
   
   var userInput4 = window.confirm("Would you like to include lowercase, uppercase and, numeric characters? (y/n)")
  
-  if userInput2 && userInput 
+  if (userInput2 && userInput4 == 'y'); {
+    for (i =0; i <= userInput1; i++) {
+     grid.push(Generated.concat( lowerc + upperc + num + userInput3))
+    }
+    } 
+  
+  if (userInput2 == 'n') and (userInput4 == 'y'); {
+    for (i =0; i <= userInput1; i++) {
+    grid.push(Generated.concat( num + lowerc + upperc ))
+    }
+  }
+  
+  if (userInput2 == 'y') and (userInput4 == 'n'); {
+    for (i =0; i <= userInput1; i++) {
+      grid.push(Generated.concat(num + lower))
+     } 
+     /* wait the AC says I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters. /*
+
+  }
   function writePassword() {
   
     var password = generatePassword();
