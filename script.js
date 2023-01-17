@@ -10,32 +10,23 @@ var Generated = [];
 var generateBtn = document.querySelector("#generate");
 
   function generatePassword {
-  var userInput1 = numbers(window.confirm("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
+  var userInput1 = numbers(window.prompt("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
   
-  var userInput2 = window.confirm("Would you like special characters in your passphrase (y/n)? ")
-  if (userInput2 = 'n') {
-    var userInput4 = window.confirm("Would you like to include lowercase, uppercase and, numeric characters? (y/n)")}
-    else { var userInput3 = window.confirm("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
-  }
+  var userInput2 = window.prompt("Would you like special characters in your passphrase (y/n)? ")
+  
+  var userInput3 = window.prompt("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
 
-  if (userInput2 && userInput4 == 'y'); {
+  var userInput5 = window.prompt("Would you like lowercase characters? (y/n)")
+  var userInput6 = window.prompt( "Would you like Uppercase characters? (y/n)")
+  var userInput7 = window.prompt("Would you like numeric characters? (y/n) ")
+
+   if (userInput2, userInput5, userInput6, userInput7 === 'y'); {
     for (i =0; i <= userInput1; i++) {
-     grid.push(Generated.concat( lowerc + upperc + num + userInput3))
+     Generated.push(Generated.concat( lowerc + upperc + num + userInput3))
     }
     } 
-  
-  if (userInput2 == 'n') and (userInput4 == 'y'); {
-    for (i =0; i <= userInput1; i++) {
-    grid.push(Generated.concat( num + lowerc + upperc ))
-    }
-  }
-  
-  if (userInput2 == 'y') and (userInput4 == 'n'); {
-    for (i =0; i <= userInput1; i++) {
-      grid.push(Generated.concat(num + lower))
-     } 
-     /* wait the AC says I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters. /*
-
+    if (userInput2, userInput5, userInput6, userInput7 === 'n'); {
+      return; 0}
   }
   function writePassword() {
   
@@ -45,15 +36,41 @@ var generateBtn = document.querySelector("#generate");
     passwordText.value = password;
   
   }
+
+// option 2 //
+   /*if (userInput2 === 'y') {
+    Generated.concat(specialc)
+  }
+    else { }
   
+  if (userInput3 === "\"!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~") {
+    Generated.concat(userInput3);
+  }
+  if (userInput5 === 'y') {
+    Generated.concat(lowerc);
+  }
+  if (userInput6 === 'y') {
+    Generated.concat(upperc);
+  }
+  if (userInput7=== 'y') {
+    Generated.concat(num);
+  }
+/*
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
   
 
  
- 
- 
- 
+
  
  
  
