@@ -9,36 +9,69 @@ var Generated = [];
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-  function generatePassword {
-  var userInput1 = numbers(window.prompt("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
+  function generatePassword() {
   
+  var userInput1 = Number(window.prompt("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
   var userInput2 = window.prompt("Would you like special characters in your passphrase (y/n)? ")
-  
   var userInput3 = window.prompt("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
-
   var userInput5 = window.prompt("Would you like lowercase characters? (y/n)")
   var userInput6 = window.prompt( "Would you like Uppercase characters? (y/n)")
   var userInput7 = window.prompt("Would you like numeric characters? (y/n) ")
+  
 
-   if (userInput2, userInput5, userInput6, userInput7 === 'y'); {
+  if (userInput2 === 'y' && userInput5 === 'y' && userInput6 === 'y' && userInput7 === 'y'); {
     for (i =0; i <= userInput1; i++) {
      Generated.push(Generated.concat( lowerc + upperc + num + userInput3))
     }
     } 
-    if (userInput2, userInput5, userInput6, userInput7 === 'n'); {
-      return; 0}
+  if (userInput2 === 'n' && userInput5 === 'n' && userInput6 === 'n' && userInput7 === 'n'); {
+      alert('')
+    return null
+     } 
+  if (userInput2 === 'n' && userInput5 === 'y' && userInput6 === 'n' && userInput7 === 'y'); { 
+      for (i =0; i <= userInput1; i++) { 
+        Generated.push(Generated.concat( userInput2 + lowerc + specialc ))
+      } 
+  if (userInput2 === 'y' && userInput5 === 'y' && userInput6 === 'n' && userInput7 === 'n'); {
+      for (i =0; i <= userInput1; i++) {
+      Generated.push(Generated.concat(userInput3 + lowerc + upperc  )) }
+    }
+
+  if (userInput2 === 'n' && userInput5 === 'n' && userInput6 === 'y' && userInput7 === 'y'); { 
+      for (i =0; i <= userInput1; i++) {
+      Generated.push(generated.concat(userInput3 + lowerc + upperc + num)) } 
+
+     }
+  if (userInput2 === 'y' && userInput5 === 'n' && userInput6 === 'y' && userInput7 === 'n'); { 
+      for (i = 0; i <= userInput1; i++) {
+      Generated.push(generated.concat(userInput3 + upperc)) }
+    }
+
   }
-  function writePassword() {
-  
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+
+
+
     
-    passwordText.value = password;
+     
+
+
+// Write password to the #password input
+function writePassword() {
   
-  }
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 
 // option 2 //
    /*if (userInput2 === 'y') {
+    end user
     Generated.concat(specialc)
   }
     else { }
