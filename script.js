@@ -2,7 +2,7 @@
 var num = ['0,1,2,3,4,5,6,7,8,9']
 var lowerc = ['abcdegfhijklmnopqrstuvwxyz']
 var upperc = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
-var specialc = ["!#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "] /* how do i add a single and double quote without messing up syntax? /*
+var specialc = ["\"!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ "] */ how do i add a single and double quote without messing up syntax? */
 var Generated = [];
 
 
@@ -13,14 +13,11 @@ var generateBtn = document.querySelector("#generate");
   var userInput1 = numbers(window.confirm("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
   
   var userInput2 = window.confirm("Would you like special characters in your passphrase (y/n)? ")
-  if (userInput2 == 'n') {
-    /* ask about how to ignore userinput3 if userinput2 is no */ 
+  if (userInput2 = 'n') {
+    var userInput4 = window.confirm("Would you like to include lowercase, uppercase and, numeric characters? (y/n)")}
+    else { var userInput3 = window.confirm("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
   }
-  
-  var userInput3 = window.confirm("Which special characters would you prefer in your new passphrase? Here are the allowed characters, !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ")
-  
-  var userInput4 = window.confirm("Would you like to include lowercase, uppercase and, numeric characters? (y/n)")
- 
+
   if (userInput2 && userInput4 == 'y'); {
     for (i =0; i <= userInput1; i++) {
      grid.push(Generated.concat( lowerc + upperc + num + userInput3))
@@ -53,8 +50,6 @@ var generateBtn = document.querySelector("#generate");
   generateBtn.addEventListener("click", writePassword);
   
 
- 
- /* we want to concat the combinations of inputs from the user to use in the final for loop for the generates password. /* 
  
  
  
