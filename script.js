@@ -6,9 +6,9 @@
 var generateBtn = document.querySelector("#generate");
 
   function generatePassword() {
-  var num = ['0,1,2,3,4,5,6,7,8,9']
-  var lowerc = ['abcdegfhijklmnopqrstuvwxyz']
-  var upperc = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+  var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  var lowerc = ["a", "b", "c","d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"]
+  var upperc = ["A","B","C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   var Generated = [];
   
   var userInput1 = Number(window.prompt("Allow me inquire about your passphrase, what length would you like it to be (8-128 characters)?"))
@@ -43,9 +43,10 @@ if (userInput2 === 'y' && userInput4 === 'n' && userInput5 === 'y' && userInput6
   var Generated1 = Generated.concat(userInput3, upperc)
      }
 for (i = 1; i <= userInput1; i++){
-     Generated1 += Generated.charAt(Math.floor(Math.random() * userInput1));
+  var password1 = Math.floor(Math.random() * userInput1);
+  var randomized =Generated1[password1];
  }
-return Generated1
+return randomized 
 
   }
   
@@ -57,7 +58,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-  return writePassword
+  
 }
 
 
