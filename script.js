@@ -24,6 +24,10 @@ var generateBtn = document.querySelector("#generate");
     alert('hello')
   return null
    } 
+   if (userInput1 > 128) {
+    alert("choose a number between 8-128.")
+    return null
+   }
 if (userInput2 === 'y') {
    Generated = Generated.concat(specialC)
   
@@ -50,10 +54,9 @@ if (userInput6 === 'y') {
 
      for (i = 1; i <= userInput1; i++) {
   var randomIndex = Math.floor(Math.random() * Generated.length);
-  var randomized =Generated[randomIndex];
+  var randomized = Generated[randomIndex];
   password += randomized
-
- }
+} 
 
 return password 
 }
