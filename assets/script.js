@@ -21,12 +21,12 @@ var generateBtn = document.querySelector("#generate");
 
 
   if (userInput2 === 'n' && userInput4 === 'n' && userInput5 === 'n' && userInput6 === 'n') {
-    alert('hello')
+    alert('Please agree to atleast 1 preference.')
   return null
    } 
-   if (userInput1 > 128) {
-    alert("choose a number between 8-128.")
-    return null
+   if (userInput1 > 128 || userInput1 < 8) {
+    alert('length of your passphrase must be between 8-128 characters!')
+    return
    }
 if (userInput2 === 'y') {
    Generated = Generated.concat(specialC)
